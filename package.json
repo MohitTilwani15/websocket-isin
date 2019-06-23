@@ -1,0 +1,20 @@
+{
+  "name": "isin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev:server": "nodemon index.js",
+    "dev:client": "npm run dev --prefix client",
+    "heroku-prebuild": "npm install --dev",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client",
+    "poststart": "npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
